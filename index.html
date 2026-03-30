@@ -1,89 +1,405 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Pet. isco</title>
+
+    <!-- Fonte personalizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- Cabeçalho -->
     <header>
-        <h1>Pet. isco</h1>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
+        <div class="logo">
+            <h1 id="inicio">Pet. isco</h1>
+        </div>
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
         </nav>
+        <div class="actions">
+            <button class="btn-login" data-bs-toggle="modal" data-bs-target="#cadastroModal">Entrar/Cadastrar</button>
+        </div>
         <hr>
     </header>
 
     <main>
-        <h2>Produtos</h2>
+        <img src="images/capa.svg" width="100%">
 
-        <h2>Rações</h2>
-        <div>
-            <img src="images/racao1.jpg" alt="Ração Premium para cães" width="200">
-            <h3>Ração Biofresh Super Premium - Adulto Mini/Pequeno </h3>
-            <p>Alimentação completa e balanceada, livre de transgênicos, aromatizantes e corantes artificiais, mantém os pelos mais brilhante e a pele mais saudável. 100% natural</p>
-            <p>R$ 320,00</p>
-        </div>
-        <div>
-            <img src="images/racao2.jpg" alt="Ração para gatos filhotes" width="200">
-            <h3>Ração Ração Biofresh Gatos Castrado Salmão </h3>
-            <p>- Favorece a saúde oral, ajudando na prevenção de doenças nos dentes e gengiva.   Nutrientes que proporcionam a formação de fezes mais firmes e com menos odor;
-- Auxilia na manutenção e beleza dos pelos, promovendo mais brilho e fios sedosos;
-- Contribui para o trato urinário saudável através da alta concentração de minerais.</p>
-            <p>R$ 90,00</p>
+        <h2 id="produtos" class="text-center my-4">Produtos</h2>
+
+        <!-- Alimentação -->
+        <h3 class="text-center my-3">Alimentação</h3>
+        <div class="carousel-container">
+            <button class="scroll-btn scroll-left" data-target="alimentacao">&lt;</button>
+            <div class="cards-row" id="alimentacao">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/racao1.jpg" class="card-img-top" alt="Ração Premium para cães">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração Biofresh Super Premium</h5>
+                        <p class="card-text">Alimentação completa e balanceada, 100% natural.</p>
+                        <p><strong>R$ 320,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/racao2.jpg" class="card-img-top" alt="Ração para gatos castrados">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração Biofresh Gatos Castrados</h5>
+                        <p class="card-text">Favorece saúde oral e trato urinário saudável.</p>
+                        <p><strong>R$ 90,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/racao3.jpg" class="card-img-top" alt="Outra Ração">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Special Ração para Cães Adultos</h5>
+                        <p class="card-text">Fórmula balanceada com proteínas de alta qualidade, ideal para cães adultos de médio porte.</p>
+                        <p><strong>R$ 120,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/racao4.jpg" class="card-img-top" alt="Outra Ração">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração Whiskas Gatos Adultos Carne</h5>
+                        <p class="card-text">Crocantes por fora e macios por dentro, com sabor irresistível de carne.</p>
+                        <p><strong>R$ 75,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/racao5.jpg" class="card-img-top" alt="Outra Ração">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração Premier Nutrição Clínica Light</h5>
+                        <p class="card-text">Indicada para cães com tendência ao sobrepeso, auxilia no controle de peso.</p>
+                        <p><strong>R$ 145,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/racao6.jpg" class="card-img-top" alt="Outra Ração">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração Royal Canin Puppy Medium</h5>
+                        <p class="card-text">Especial para filhotes de porte médio, fortalece imunidade e crescimento saudável.</p>
+                        <p><strong>R$ 210,00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn scroll-right" data-target="alimentacao">&gt;</button>
         </div>
 
-        <h2>Acessórios</h2>
-        <div>
-            <img src="images/bebedouro.jpg" alt="Bebedouro fonte" width="200">
-            <h3>Bebedouro fonte Yo</h3>
-            <p>Feita em polipropileno atóxico de alta qualidade, é resistente, leve e fácil de limpar. Super silenciosa e fácil de limpar.</p>
-            <p>R$ 280,00</p>
-        </div>
-        <div>
-            <img src="images/arranhador.jpg" alt="Arranhador para gatos" width="200">
-            <h3>Arranhador</h3>
-            <p>Arranhador para gatos em madeira e sisal - 45cm</p>
-            <p>R$ 150,00</p>
+        <!-- Acessórios -->
+        <h3 class="text-center my-3">Acessórios</h3>
+        <div class="carousel-container">
+            <button class="scroll-btn scroll-left" data-target="acessorios">&lt;</button>
+            <div class="cards-row" id="acessorios">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/bebedouro.jpg" class="card-img-top" alt="Bebedouro fonte">
+                    <div class="card-body">
+                        <h5 class="card-title">Bebedouro Fonte Yo</h5>
+                        <p class="card-text">Resistente, leve e super silenciosa.</p>
+                        <p><strong>R$ 280,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/arranhador.jpg" class="card-img-top" alt="Arranhador para gatos">
+                    <div class="card-body">
+                        <h5 class="card-title">Arranhador</h5>
+                        <p class="card-text">Madeira e sisal - 45cm.</p>
+                        <p><strong>R$ 150,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/coleira.jpg" class="card-img-top" alt="Coleira">
+                    <div class="card-body">
+                        <h5 class="card-title">Coleira Antipulgas Seresto  </h5>
+                        <p class="card-text">Proteção contra pulgas e carrapatos por até 8 meses, resistente à água.</p>
+                        <p><strong>R$ 180,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/cama.jpg" class="card-img-top" alt="Cama">
+                    <div class="card-body">
+                        <h5 class="card-title">Cama Pet Redonda Macia  </h5>
+                        <p class="card-text">Conforto extra para cães e gatos, tecido lavável e enchimento fofinho.</p>
+                        <p><strong>R$ 95,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/bola.jpg" class="card-img-top" alt="Brinquedo">
+                    <div class="card-body">
+                        <h5 class="card-title">Brinquedo Bola Interativa Pet Games</h5>
+                        <p class="card-text">Estimula o exercício e reduz o estresse, ideal para cães ativos.</p>
+                        <p><strong>R$ 60,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/caixa.jpg" class="card-img-top" alt="Caixa de transporte">
+                    <div class="card-body">
+                        <h5 class="card-title">Caixa de Transporte Gulliver</h5>
+                        <p class="card-text">Segura e prática para viagens, ventilação lateral e porta metálica.</p>
+                        <p><strong>R$ 250,00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn scroll-right" data-target="acessorios">&gt;</button>
         </div>
 
-        <h2>Higiene e Limpeza</h2>
-        <div>
-            <img src="images/shampoo.jpg" alt="Shampoo neutro para cães" width="200">
-            <h3>Shampoo branqueador Beeps</h3>
-            <p>Limpeza e condicionamento da pelagem de pets, branqueamento e realçamento da pelagem branca, deixá-los ainda mais brilhantes.</p>
-            <p>R$ 35,00</p>
-        </div>
-        <div>
-            <img src="images/areia.jpg" alt="Areia sanitária para gatos" width="200">
-            <h3>Areia sanitária para gatos</h3>
-            <p>Areia sanitária para gatos</p>
-            <p>R$ 40,00</p>
+        <!-- Higiene e Limpeza -->
+        <h3 class="text-center my-3">Higiene e Limpeza</h3>
+        <div class="carousel-container">
+            <button class="scroll-btn scroll-left" data-target="higiene">&lt;</button>
+            <div class="cards-row" id="higiene">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/shampoo.jpg" class="card-img-top" alt="Shampoo neutro para cães">
+                    <div class="card-body">
+                        <h5 class="card-title">Shampoo Beeps</h5>
+                        <p class="card-text">Realça pelagem branca e brilhante.</p>
+                        <p><strong>R$ 35,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/areia.jpg" class="card-img-top" alt="Areia sanitária para gatos">
+                    <div class="card-body">
+                        <h5 class="card-title">Areia Sanitária</h5>
+                        <p class="card-text">Praticidade e higiene para gatos.</p>
+                        <p><strong>R$ 40,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/tapete.jpg" class="card-img-top" alt="Tapete higiênico">
+                    <div class="card-body">
+                        <h5 class="card-title">Tapete Higiênico Super Secão</h5>
+                        <p class="card-text">Alta absorção, neutraliza odores e mantém o ambiente limpo por mais tempo.</p>
+                        <p><strong>R$ 80,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/shampoo2.jpg" class="card-img-top" alt="Shampoo neutro para cães">
+                    <div class="card-body">
+                        <h5 class="card-title">Shampoo Pet Society Neutro</h5>
+                        <p class="card-text">Praticidade e higiene para gatos.</p>
+                        <p><strong>R$ 45,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/lenco.jpg" class="card-img-top" alt="Lenços umedecidos para pets">
+                    <div class="card-body">
+                        <h5 class="card-title">Lenços Umedecidos Pet Clean  </h5>
+                        <p class="card-text">Ideais para limpeza rápida das patas e pelagem, com fragrância suave.</p>
+                        <p><strong>R$ 30,00</strong></p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/desinfetante.jpg" class="card-img-top" alt="Desinfetante para gatos">
+                    <div class="card-body">
+                        <h5 class="card-title">Desinfetante Herbal Petz</h5>
+                        <p class="card-text">Seguro para ambientes com animais, elimina bactérias e deixa aroma agradável.</p>
+                        <p><strong>R$ 25,00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn scroll-right" data-target="higiene">&gt;</button>
         </div>
 
-        <h2>Serviços</h2>
-        <ul>
-            <li>Banho e tosa - R$ 70,00 (com tele-busca)</li>
-            <li>Consulta veterinária - R$ 150,00 (sem tele-busca)</li>
-        </ul>
+        <!-- Serviços -->
+        <h2 id="servicos" class="text-center my-4">Serviços</h2>
+        <div class="d-flex justify-content-center gap-4">
+            <div class="card" style="width: 18rem;">
+                <img src="images/banho.png" class="card-img-top" alt="Banho">
+                <div class="card-body">
+                    <h5 class="card-title">Banho</h5>
+                    <p class="card-text">Banho completo para seu pet, com produtos de qualidade.</p>
+                    <p><strong>R$ 80,00</strong></p>
+                    <button class="btn btn-primary" onclick="showAgendamento('banho')">Agendar</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="images/tosa.png" class="card-img-top" alt="Tosa">
+                <div class="card-body">
+                    <h5 class="card-title">Tosa</h5>
+                    <p class="card-text">Tosa profissional para manter seu pet bem cuidado.</p>
+                    <p><strong>R$ 100,00</strong></p>
+                    <button class="btn btn-primary" onclick="showAgendamento('tosa')">Agendar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agendamento -->
+        <div id="agendamentoSection" style="display: none;">
+            <h3 class="text-center my-4">Agendamento</h3>
+            <form id="agendamentoForm" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <fieldset>
+                        <legend>Serviços (pode selecionar mais de um)</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="servico" value="banho" id="servicoBanho">
+                            <label class="form-check-label" for="servicoBanho">Banho - R$ 80,00</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="servico" value="tosa" id="servicoTosa">
+                            <label class="form-check-label" for="servicoTosa">Tosa - R$ 100,00</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="mb-3">
+                    <fieldset>
+                        <legend>Tipo de Agendamento</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo" value="telebusca" id="telebusca" required>
+                            <label class="form-check-label" for="telebusca">Tele-busca - R$ 30,00</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="tipo" value="entrega" id="entrega">
+                            <label class="form-check-label" for="entrega">Entrega no local</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="mb-3">
+                    <label for="dataAgendamento" class="form-label">Data *</label>
+                    <input type="date" id="dataAgendamento" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="horaAgendamento" class="form-label">Horário *</label>
+                    <select id="horaAgendamento" class="form-select" required>
+                        <option value="">Selecione o horário</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                </div>
+                <p><strong>Total: R$ <span id="total">0,00</span></strong></p>
+                <button type="submit" class="btn btn-success">Confirmar Agendamento</button>
+            </form>
+        </div>
     </main>
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="text-center mt-5">
         <hr>
         <p>&copy; 2026 PetShop isco - Todos os direitos reservados</p>
-        <p>Contato: contato@petisco.com</p> 
+        <p id="contato">Contato: contato@petisco.com</p>
         <p>Telefone: (49) 99999-9999</p>
         <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
+            <a href="#inicio">Início</a> |
+            <a href="#produtos">Produtos</a> |
+            <a href="#servicos">Serviços</a> |
+            <a href="#contato">Contato</a>
         </nav>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+    <!-- Modal de Cadastro -->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroModalLabel">Cadastro de Cliente e Pet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="cadastroForm">
+                        <!-- Dados do Cliente -->
+                        <h6>Dados do Cliente</h6>
+                        <div class="mb-3">
+                            <label for="nomeCliente" class="form-label">Nome Completo *</label>
+                            <input type="text" class="form-control" id="nomeCliente" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="enderecoCliente" class="form-label">Endereço *</label>
+                            <textarea class="form-control" id="enderecoCliente" rows="3" placeholder="Digite seu endereço completo" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cpfCliente" class="form-label">CPF *</label>
+                            <input type="text" class="form-control" id="cpfCliente" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+                        </div>
+                        <div class="mb-3">
+                            <fieldset>
+                                <legend>Sexo</legend>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexoCliente" id="masculino" value="masculino" required>
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexoCliente" id="feminino" value="feminino">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexoCliente" id="outro" value="outro">
+                                    <label class="form-check-label" for="outro">Outro</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefoneCliente" class="form-label">Telefone *</label>
+                            <input type="tel" class="form-control" id="telefoneCliente" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailCliente" class="form-label">E-mail *</label>
+                            <input type="email" class="form-control" id="emailCliente" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="dataNascimento">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">Desejo receber novidades por e-mail</label>
+                        </div>
+
+                        <!-- Dados do Pet -->
+                        <h6 class="mt-4">Dados do Pet</h6>
+                        <div class="mb-3">
+                            <label for="nomePet" class="form-label">Nome do Pet *</label>
+                            <input type="text" class="form-control" id="nomePet" placeholder="Nome do seu pet" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="racaPet" class="form-label">Raça</label>
+                            <input type="text" class="form-control" id="racaPet" placeholder="Raça do pet (ex: Labrador)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="idadePet" class="form-label">Idade (anos)</label>
+                            <input type="number" class="form-control" id="idadePet" min="0" max="30" placeholder="Idade em anos">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tipo de Pet</label>
+                            <select class="form-select" id="tipoPet">
+                                <option selected>Selecione</option>
+                                <option value="cao">Cão</option>
+                                <option value="gato">Gato</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="vacinado">
+                            <label class="form-check-label" for="vacinado">Pet está vacinado</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" form="cadastroForm" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

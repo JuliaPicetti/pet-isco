@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Hepta Slab, serif;
+}
+
+/* Cabeçalho*/
+header {
+    position: fixed; /* fica flutuante no topo */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    width: 90%;
+    height: 60px;
+    background-color: #a8e6cf; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;/* fica acima do conteúdo */
+    margin-right: auto;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #004d40;
+}
+
+header .menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #004d40;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header .menu a:hover {
+    color: #00796b;
+}
+
+header .actions .btn-login {
+    margin-left: 30px;
+    padding: 8px 18px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .actions .btn-login:hover {
+    background-color: #00251a;
+}
+
+main {
+    padding-top: 5%; /* Espaço extra para não esconder conteúdo atrás do header */
+}
+
+/* listagem de produtos */
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    min-height: 350px;
+    flex-shrink: 0;
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Carousel styles */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cards-row {
+    display: flex;
+    gap: 1.5rem; /* gap-4 */
+    overflow-x: scroll;
+    width: calc(4 * 18rem + 3 * 1.5rem); /* 4 cards + 3 gaps */
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.cards-row::-webkit-scrollbar {
+    display: none;
+}
+.cards-row {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-btn {
+    background: #004d40;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background: #00251a;
+}
+
+/* Override Bootstrap buttons */
+.btn {
+    background-color: #004d40 !important;
+    border-color: #004d40 !important;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: #00251a !important;
+    border-color: #00251a !important;
+}
+
